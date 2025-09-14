@@ -1,6 +1,8 @@
 const express = require('express');
 const morgan = require('morgan');
 
+const { connect, sync } = require('./config/database');
+
 const productRoutes = require('./routes/products');
 
 const app = express();
@@ -10,8 +12,16 @@ app.use(morgan('tiny'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+
+
 // Setting up routes
 app.use('/products', productRoutes);
+
+async function initializeDatabase() {
+     await connect();
+     await sync();
+   }
+   initializeDatabase();
 
 // Creating a server
 app.listen(3000, () => {

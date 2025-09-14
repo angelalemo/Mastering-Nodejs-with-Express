@@ -2,7 +2,7 @@
   "name": "mastering-nodejs-with-express",
   "version": "1.0.0",
   "description": "Mastering Node.js with Express Workshop",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
@@ -17,8 +17,7 @@
     "url": "https://github.com/lvarayut/Mastering-Nodejs-with-Express/issues"
   },
   "homepage": "https://github.com/lvarayut/Mastering-Nodejs-with-Express#readme",
-  "dependencies": {},
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.22"
   }
 }
